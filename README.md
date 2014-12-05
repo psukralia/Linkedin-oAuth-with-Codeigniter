@@ -36,3 +36,7 @@ Fetch User Data
 
 Now call your controller and enjoy!
 
+
+Report Issues/Bugs
+------------------
+[write me for any question](mailto:psukralia@gmail.com)
