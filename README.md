@@ -21,6 +21,30 @@ Usage
 - This folder contain application folder only with require files
 - copy apiLinkedin controller to your controller folder carefully make sure you have setup your codeigniter carefully with encryption key for session, you may require to load session library.
 - Load linkedin library `with three parameter` in index function, you may also load it when parent contructor invoke. But load only when require for better understanding (I know, it's not optimize way)
+
+```php
+<?php
+// Intilize controller class
+public function index($REFERRED_BY=0) { 
+		$this->load->library('linkedin', array(
+            'access' => "API key",
+            'secret' => "Secret Key",
+            'callback' => "Redirect code" 
+        ));
+		$this->linkedin->getRequestToken();
+        $requestToken = serialize($this->linkedin->request_token);
+        $this->session->set_userdata(array(
+            'requestToken' => $requestToken
+        ));
+		header("Location: " . $this->linkedin->generateAuthorizeUrl());
+    }
+
+```
+
+
+
+
+
 - Pass your API key, Secret Key and Redirect url `see below for more for redirect url` while loading.
 - Great! Upto this, you have finish 50% of your Job. Test it By calling your controller `<siteurl><folder-where-you-set-up-for-test-it>index.php/apiLinkedin/`.
 - Now copy Library file and oAuth folder to your `application/libraries` folder.
