@@ -10,7 +10,7 @@ access Linkedin Platform from your PHP code.
 
 Codeigniter Library for Linkedin (v 1.1)
 
-The basic and require [Step 1. Register your application](https://www.linkedin.com/secure/developer/).
+The basic and require [Step 1. Register your application](https://www.linkedin.com/secure/developer).
 Note down your API Key and Secret Key, choose maximize scope for better testing.
 
 
