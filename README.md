@@ -17,7 +17,7 @@ Note down your API Key and Secret Key, choose maximize scope for better testing.
 Usage
 =====
 
-- Download .zip of Linkedin-oAuth-with-Codeigniter here
+- Download .zip of Linkedin-oAuth-with-Codeigniter
 - This folder contain application folder only with require files
 - copy apiLinkedin controller to your controller folder carefully make sure you have setup your codeigniter carefully with encryption key for session, you may require to load session library.
 - Load linkedin library `with three parameter` in index function, you may also load it when parent contructor invoke. But load only when require for better understanding (I know, it's not optimize way)
